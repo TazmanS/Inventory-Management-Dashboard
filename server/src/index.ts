@@ -5,6 +5,7 @@ import morgan from "morgan";
 import bodyParser from "body-parser";
 import cors from "cors";
 import dashboardRoutes from "./routes/dashboardRoutes";
+import productRouters from "./routes/productRouters";
 
 dotenv.config()
 const app = express();
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cors());
 
 app.use('/dashboard', dashboardRoutes);
+app.use('/products', productRouters)
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
