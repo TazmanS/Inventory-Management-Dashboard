@@ -58,7 +58,7 @@ export interface User {
 
 export const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.REACT_APP_BASE_URL
+    baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL
   }),
   reducerPath: 'api',
   tagTypes: ["DashboardMetrics", "Products", "Users", "Expenses"],
